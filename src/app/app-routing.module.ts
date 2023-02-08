@@ -16,10 +16,12 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent,
-      },
-      {
-        path: 'progress',
-        component: ProgressComponent,
+        children: [
+          {
+            path: 'progress',
+            component: ProgressComponent,
+          },
+        ],
       },
       {
         path: '',
